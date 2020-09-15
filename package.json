@@ -1,0 +1,52 @@
+{
+  "name": "pair-a-dice_repo",
+  "version": "1.0.0",
+  "description": "Pair-a-Dice Scratch Project",
+  "main": "/server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack-dev-server --open\"",
+    "server": "nodemon /server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frakes413/pair-a-dice_repo.git"
+  },
+  "author": "Pair-a-Dice Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frakes413/pair-a-dice_repo/issues"
+  },
+  "homepage": "https://github.com/frakes413/pair-a-dice_repo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^8.3.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools": "^3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
+    "css-loader": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

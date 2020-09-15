@@ -1,2 +1,1 @@
-# IterationProject
-PairADice 2.0
+# pair-a-dice_repo
