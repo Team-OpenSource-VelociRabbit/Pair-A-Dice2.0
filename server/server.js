@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const apiRouter = require('./routes/api');
+const authRouter = require('./routes/auth-routes');
 const PORT = 3000;
 const cors = require('cors');
+
 
 const socketio = require('socket.io');
 const http = require('http'); 
@@ -27,12 +29,15 @@ io.on('connection', socket => {
 
 });
 
-//body parser
+
+// body parser
 app.use(bodyParser.json());
 
-//defining route handler to apiRouter
-app.use('/api', apiRouter);
+// defining route handler to authRouter for OAuth
+app.use('/auth', authRouter);
 
+// defining route handler to apiRouter
+app.use('/api', apiRouter);
 
 //Start server
 server.listen(PORT, () => {
@@ -40,5 +45,6 @@ server.listen(PORT, () => {
 });
 
 module.exports = app;
+
 
 
