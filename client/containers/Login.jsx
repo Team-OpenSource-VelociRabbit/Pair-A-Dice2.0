@@ -51,7 +51,7 @@ class Login extends Component {
           </span>
           <div className="button-container">
             <span className="login-register-buttons">
-              <Link to="/waiting-room" className="waiting-room-link">
+              <Link to="wait-room" className="waiting-room-link">
                 <button 
                   id="register-button"
                   type="button"
@@ -65,6 +65,11 @@ class Login extends Component {
                   onClick={() => this.props.verifyUser({username: usernameInput, password: passwordInput})}
                 >Login</button>
               </Link>
+              <div>
+                <a href="http://localhost:3000/auth/google">
+                sign in with google
+                </a>
+              </div>
               </span>
           </div>
         </div>
