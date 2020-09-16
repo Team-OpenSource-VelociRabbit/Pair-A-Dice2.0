@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const apiRouter = require('./routes/api');
 const authRouter = require('./routes/auth-routes');
+const passportSetup = require('../config/passport-setup');
 const PORT = 3000;
 const cors = require('cors');
 
