@@ -61,7 +61,17 @@ function CodeEditor() {
   const [code, setCode] = useState(``);
   const [theme, setTheme] = useState("monokai");
   const [fontSize, setFontSize] = useState(16);
+ 
+  // send text to server on every handle change
+  const handleTextChange = (text) => {
+    socket.emit('textcode', text)
+  };
 
+  // but we need to update state, we can also 
+  // change state but send out the text
+  socket.on('textcode', (code) => {
+    setCode(code)
+  })  
   
   
   return (

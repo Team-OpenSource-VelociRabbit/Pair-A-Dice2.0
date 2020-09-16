@@ -19,8 +19,13 @@ const io = socketio(server);
 
 app.use(cors());
 
+io.on('connection', socket => {
 
+   socket.on('textcode', (textdata) => {
+        io.sockets.emit('textcode', textdata)
+    })
 
+});
 
 //body parser
 app.use(bodyParser.json());
@@ -37,15 +42,3 @@ server.listen(PORT, () => {
 module.exports = app;
 
 
-// io.sockets.on('connection', (socket) => {
-    //     console.log('user connected', socket.id); 
-    
-    //     socket.on('textCode', (data) => {
-    //         console.log(data); 
-    //         io.sockets.emit('textCode',data.text);
-    //     })
-    
-    //     socket.on('disconnect', () => {
-    //         console.log('A user has disconnected'); 
-    //     })
-    // })
