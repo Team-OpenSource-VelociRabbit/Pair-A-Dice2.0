@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
+import CodeEditor from '../components/CodeEditor.jsx'; 
 
 // import our children components
 
@@ -35,8 +36,6 @@ class SessionRoom extends Component {
         </center>
         <div className="sessions-links">
           <center>
-            <a href="https://hangouts.google.com/call/fje6hzvFsddAlpEn1VHoACEA">Video Chat</a><br /><br />
-            <a href="https://codesandbox.io/s/serene-bhabha-0s83d">Sandbox</a><br /><br />
             <pre>
               <code>
                 <span>"Write a program that prints the numbers from 1 to 100. <br />
@@ -47,6 +46,11 @@ class SessionRoom extends Component {
             </pre>
           </center>
         </div>
+        <center>
+        <div className="codeeditor">
+          <CodeEditor/>
+          </div>
+          </center>
         <div className="level-language-form">
           <Link to="/waiting-room" className="session-room-link"><br /><br />
           <center>
