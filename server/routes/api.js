@@ -30,7 +30,7 @@ router.post('/feedback', userController.sessionFeedback,
 );
 
 //Put request, increment session count
-router.put('/session', userController.incrementSessionCount, 
+router.put('/session', userController.incrementSessionCount,
     (req, res) => res.status(200).json({})
 );
 
