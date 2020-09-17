@@ -14,9 +14,9 @@ const cors = require('cors');
 
 
 const socketio = require('socket.io');
-const http = require('http'); 
-const server = http.createServer(app); 
-const io = socketio(server); 
+const http = require('http');
+const server = http.createServer(app);
+const io = socketio(server);
 
 console.log('in da server');
 

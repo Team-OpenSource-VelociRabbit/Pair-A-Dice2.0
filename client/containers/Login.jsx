@@ -74,6 +74,11 @@ class Login extends Component {
                 sign in with google
                 </a>
               </div>
+              <div>
+                <a href="http://localhost:8080/auth/facebook">
+                sign in with facebook
+                </a>
+              </div>
               </span>
           </div>
         </div>
