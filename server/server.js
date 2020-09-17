@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const apiRouter = require('./routes/api');
 const authRouter = require('./routes/auth-routes');
 const passportSetup = require('../config/passport-setup');
+const cookieSession = require('cookie-session');
+const keys = require('../config/keys');
 const PORT = 3000;
 const cors = require('cors');
 
@@ -30,9 +32,14 @@ io.on('connection', socket => {
 
 });
 
-
 // body parser
 app.use(bodyParser.json());
+
+// cookie-session set-up
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [keys.session.cookieKey],
+}));
 
 // defining route handler to authRouter for OAuth
 app.use('/auth', authRouter);
