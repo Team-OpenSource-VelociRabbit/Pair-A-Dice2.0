@@ -62,11 +62,15 @@ class Login extends Component {
                 <button 
                   id="login-button"
                   type="button"
-                  onClick={() => this.props.verifyUser({username: usernameInput, password: passwordInput})}
+                  // onClick={() => {
+                  //   fetch("http://localhost:8080/auth/google")
+                  //     .then(user => console.log(user))
+                  //     .catch(err => console.log(err));
+                  // }}
                 >Login</button>
               </Link>
               <div>
-                <a href="http://localhost:3000/auth/google">
+                <a href="http://localhost:8080/auth/google">
                 sign in with google
                 </a>
               </div>
