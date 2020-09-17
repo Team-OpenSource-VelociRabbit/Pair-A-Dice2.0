@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../client/reducers/index.js"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,OAAO,CAAC;AAExC,2BAA2B;AAC3B,OAAO,WAAW,MAAM,kBAAkB,CAAC;AAG3C,mBAAmB;AACnB,IAAM,QAAQ,GAAG,eAAe,CAAC;IAC/B,+CAA+C;IAC/C,IAAI,EAAE,WAAW;CAClB,CAAC,CAAC;AAEH,kDAAkD;AAClD,eAAe,QAAQ,CAAC"}
