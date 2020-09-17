@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: 20;
-
+  background-image: linear-gradient(to bottom right, aquamarine, green)
 }
 
 .login-container {
@@ -36,7 +36,7 @@ body {
   background-color: black;
   color: whitesmoke;
   // border: 2px solid whitesmoke;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .login-buttons:focus {
