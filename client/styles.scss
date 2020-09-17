@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: 20;
-
+  background-image: linear-gradient(to bottom right, aquamarine, green)
 }
 
 .login-container {
@@ -28,6 +28,19 @@ body {
   display: flex;
   justify-content: center;
   margin: 40px;
+}
+
+.login-buttons {
+  height: 25px;
+  width: 200px;
+  background-color: black;
+  color: whitesmoke;
+  // border: 2px solid whitesmoke;
+  border-radius: 6px;
+}
+
+.login-buttons:focus {
+  outline: 0;
 }
 
 .dice {

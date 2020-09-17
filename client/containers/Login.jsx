@@ -31,7 +31,7 @@ class Login extends Component {
         {/* 👥🎲 */}
         </div>
         <div className="login-subTitle">
-        Pair-programming roulette.<br />
+        a pair-programming roulette<br />
         </div>
         <div className="dice">🎲🎲</div>
         <div className="login-form">
@@ -50,30 +50,22 @@ class Login extends Component {
             ></input>
           </span>
           <div className="button-container">
-            <span className="login-register-buttons">
-              <Link to="wait-room" className="waiting-room-link">
-                <button 
-                  id="register-button"
-                  type="button"
-                  // onClick={() => this.props.addUser()}
-                >Register</button>
-              </Link>
-              <Link to="/waiting-room" className="waiting-room-link">
-                <button 
-                  id="login-button"
-                  type="button"
-                  onClick={() => this.props.verifyUser({username: usernameInput, password: passwordInput})}
-                >Login</button>
-              </Link>
-              <div>
-                <a href="http://localhost:3000/auth/google">
-                sign in with google
-                </a>
-              </div>
-              </span>
+          <form className="login-buttons">
+          <input type="submit" value="Login / Register" className="login-buttons"/>
+        </form>
+          </div>
+          <div className="button-container">
+            <form action="http://localhost:8080/auth/google">
+              <input type="submit" value="Sign in with Google" className="login-buttons"/>
+            </form>
+          </div>
+          <div className="button-container">
+            <form action="http://localhost:8080/auth/facebook">
+              <input type="submit" value="Sign in with Facebook" className="login-buttons"/>
+            </form>
+          </div>
           </div>
         </div>
-      </div>
     )
   }
 }

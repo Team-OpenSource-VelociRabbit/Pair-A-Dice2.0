@@ -3,7 +3,7 @@ const userController = {};
 const db = require('../models/userModel.js');
 
 //Adding a new user upon registration
-userController.addUser = (req, res, next) => {
+userController.addOrVerifyUser = (req, res, next) => {
   const { username, password } = req.body;
   //Insert query text, adds new user to database
   const queryText = `INSERT INTO users (username, password, skill, language, status, sessioncount) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
