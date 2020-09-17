@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const apiRouter = require('./routes/api');
 const authRouter = require('./routes/auth-routes');
+const WRRouter = require('./routes/waitingRoom-routes');
 const passportSetup = require('../config/passport-setup');
 const cookieSession = require('cookie-session');
 const keys = require('../config/keys');
@@ -16,6 +18,10 @@ const http = require('http');
 const server = http.createServer(app); 
 const io = socketio(server); 
 
+console.log('in da server');
+
+// serving index.html upon every GET request
+// app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 //initialize sockets 
 // const http = require('http');
@@ -48,6 +54,9 @@ app.use(passport.session());
 
 // defining route handler to authRouter for OAuth
 app.use('/auth', authRouter);
+
+// defining route handler to WRRouter for OAuth
+app.use('/waiting-room', WRRouter);
 
 // defining route handler to apiRouter
 app.use('/api', apiRouter);

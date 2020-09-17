@@ -13,7 +13,9 @@ router.get('/google', passport.authenticate('google', {
 );
 
 // callback route for Google to redirect
-router.get('/google/redirect', passport.authenticate('google'), (req, res) => {res.redirect('http://localhost:8080/waiting-room')});
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+  res.redirect('http://localhost:8080/waiting-room');
+});
 
 // auth facebook
 router.get('/facebook', (req, res) => {

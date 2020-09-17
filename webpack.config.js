@@ -36,6 +36,7 @@ module.exports = {
     publicPath: '/build/',
     proxy: {
       '/auth': 'http://localhost:3000',
+      // '/waiting-room': 'http://localhost:3000'
     },
     historyApiFallback: true,
     contentBase: './',
