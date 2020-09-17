@@ -36,9 +36,7 @@ class WaitingRoom extends Component {
   }
   // render Logo and LoginForm Component
   render() {
-    
     console.log(this.state.toggle)
-
     return(
       <div className="waiting-room-container">
         {/* <span className="waiting-room-navbar"> */}
@@ -70,6 +68,7 @@ class WaitingRoom extends Component {
                 id="waiting-room-button"
                 type="button"
                 // onClick={() => this.props.findPartner()}
+                // onClick={() => console.log('hello from waiting room')}
             >FIND PARTNER</button>
           </Link>
         </div>

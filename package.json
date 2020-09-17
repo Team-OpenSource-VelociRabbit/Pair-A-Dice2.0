@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack-dev-server --open\"",
-    "server": "nodemon /server/server.js"
+    "server": "nodemon /server/server.js",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,10 @@
   },
   "homepage": "https://github.com/frakes413/pair-a-dice_repo#readme",
   "dependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.10.3",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -37,12 +42,14 @@
     "redux-devtools": "^3.7.0",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
+    "typescript": "^4.0.2",
     "xterm-for-react": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "awesome-typescript-loader": "^5.2.1",
     "babel": "^6.23.0",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.3.0",
@@ -53,11 +60,14 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "html-webpack-plugin": "^4.4.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
     "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^10.0.2",
+    "source-map-loader": "^1.1.0",
     "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
