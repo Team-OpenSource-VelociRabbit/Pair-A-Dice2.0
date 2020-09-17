@@ -12,7 +12,6 @@ const passport = require('passport');
 const PORT = 3000;
 const cors = require('cors');
 
-
 const socketio = require('socket.io');
 const http = require('http');
 const server = http.createServer(app);
@@ -32,7 +31,6 @@ console.log('in da server');
 app.use(cors());
 
 io.on('connection', socket => {
-
    socket.on('textcode', (textdata) => {
         io.sockets.emit('textcode', textdata)
     })
@@ -67,6 +65,5 @@ server.listen(PORT, () => {
 });
 
 module.exports = app;
-
 
 
