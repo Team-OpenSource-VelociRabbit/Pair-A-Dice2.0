@@ -4,8 +4,8 @@ module.exports = {
     clientSecret: 'DcjBoJlWgBM4gdup7jef_Ilr',
   },
   facebook: {
-    clientID: '673901300141704',
-    clientSecret: '4eab53f66fff61c7a7ce6fc7119c2cb5',
+    clientID: '369473650729929',
+    clientSecret: '490d9cd1e1930855dee653793da5851c',
   },
   session: {
     cookieKey: 'asdfhwrtgnsrgnsd',

@@ -30,6 +30,19 @@ body {
   margin: 40px;
 }
 
+.login-buttons {
+  height: 25px;
+  width: 200px;
+  background-color: black;
+  color: whitesmoke;
+  // border: 2px solid whitesmoke;
+  border-radius: 3px;
+}
+
+.login-buttons:focus {
+  outline: 0;
+}
+
 .dice {
   margin: 40px;
 }
