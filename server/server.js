@@ -22,7 +22,6 @@ const io = socketio(server);
 app.use(cors());
 
 io.on('connection', socket => {
-
    socket.on('textcode', (textdata) => {
         io.sockets.emit('textcode', textdata)
     })

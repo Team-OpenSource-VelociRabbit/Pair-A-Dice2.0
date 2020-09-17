@@ -4,16 +4,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import store from './store.js';
-
 import './styles.scss';
-
-
-render(
-  <BrowserRouter>
-    <Provider store={store}>
-        <App />
-    </Provider>
-  // </BrowserRouter>,
-  document.getElementById('contents')
-);
-
+render(React.createElement(BrowserRouter, null,
+    React.createElement(Provider, { store: store },
+        React.createElement(App, null))), document.getElementById('contents'));
+//# sourceMappingURL=index.js.map
